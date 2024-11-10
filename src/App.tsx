@@ -16,17 +16,6 @@ function App() {
             {`[\\n]ora casey`}
           </Typography>
         </Box>
-        <Box display="flex" justifyContent="end" gap={2} alignItems="center">
-          {/* <Link to="/resume" className="button-link">
-            <ResumeIcon />
-          </Link>
-          <a target="_blank" href="https://www.linkedin.com/in/nora-casey/">
-            <LinkedInIcon />
-          </a>
-          <a target="_blank" href="https://github.com/norarcasey">
-            <GithubIcon />
-          </a> */}
-        </Box>
       </Box>
       <main className="page-body">
         <Puzzle />

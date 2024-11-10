@@ -1,5 +1,5 @@
 import Crossword from "@jaredreisinger/react-crossword";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const data = {
   across: {
@@ -64,8 +64,21 @@ const data = {
 
 export function Puzzle() {
   return (
-    <Box display="flex" justifyContent="center">
-      <Box display="flex" flexDirection="row-reverse" minWidth={600}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Typography variant="h4" mb={4}>
+        November 9th, 2024
+      </Typography>
+      <Box
+        display="flex"
+        flexDirection="row-reverse"
+        minWidth={600}
+        maxWidth={600}
+      >
         <Crossword data={data} />
       </Box>
     </Box>
