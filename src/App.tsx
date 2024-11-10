@@ -1,8 +1,22 @@
 import { Box, Typography } from "@mui/material";
 import { Puzzle } from "./Puzzle";
-import { nov92024 } from "./puzzle-data";
+import { puzzleData } from "./data/puzzle-data";
+import { PuzzleList } from "./PuzzleList";
+import { useState } from "react";
 
 function App() {
+  const [puzzleInfo, setPuzzleInfo] = useState({
+    label: "November 10th, 2024",
+    data: puzzleData["November 10th, 2024"],
+  });
+
+  function handlePuzzleSelect(date: string) {
+    setPuzzleInfo({
+      label: date,
+      data: puzzleData[date],
+    });
+  }
+
   return (
     <>
       <Box component="header" className="page-header">
@@ -19,7 +33,8 @@ function App() {
         </Box>
       </Box>
       <main className="page-body">
-        <Puzzle label="November 9th, 2024" data={nov92024} />
+        <Puzzle label={puzzleInfo.label} data={puzzleInfo.data} />
+        <PuzzleList onPuzzleSelect={handlePuzzleSelect} />
       </main>
       <footer className="page-footer">
         <div className="copyright">
