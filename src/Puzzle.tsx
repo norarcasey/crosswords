@@ -1,60 +1,61 @@
-import Crossword from '@jaredreisinger/react-crossword';
+import Crossword from "@jaredreisinger/react-crossword";
+import { Box } from "@mui/material";
 
 const data = {
   across: {
     1: {
-      clue: 'Anatomical bag',
-      answer: 'SAC',
+      clue: "Anatomical bag",
+      answer: "SAC",
       row: 0,
       col: 0,
     },
     4: {
-      clue: 'Gorgeous',
-      answer: 'NORA',
+      clue: "Gorgeous",
+      answer: "NORA",
       row: 1,
       col: 0,
     },
     6: {
-      clue: 'Hot adult device?',
-      answer: 'IRON',
+      clue: "Hot adult device?",
+      answer: "IRON",
       row: 2,
       col: 0,
     },
     7: {
-      clue: 'Possible result of combat fatigue',
-      answer: 'PTSD',
+      clue: "Possible result of combat fatigue",
+      answer: "PTSD",
       row: 3,
       col: 0,
     },
     8: {
-      clue: 'A stuborn person',
-      answer: 'ASS',
+      clue: "A stuborn person",
+      answer: "ASS",
       row: 4,
       col: 1,
     },
   },
   down: {
     1: {
-      clue: 'Sound scissors make',
-      answer: 'SNIP',
+      clue: "Sound scissors make",
+      answer: "SNIP",
       row: 0,
       col: 0,
     },
     2: {
-      clue: 'Large artery',
-      answer: 'AORTA',
+      clue: "Large artery",
+      answer: "AORTA",
       row: 0,
       col: 1,
     },
     3: {
       clue: "Jesus's wood?",
-      answer: 'CROSS',
+      answer: "CROSS",
       row: 0,
       col: 2,
     },
     5: {
       clue: '"No ifs ______ or buts"',
-      answer: 'ANDY',
+      answer: "ANDY",
       row: 1,
       col: 3,
     },
@@ -62,5 +63,11 @@ const data = {
 };
 
 export function Puzzle() {
-  return <Crossword data={data} />;
+  return (
+    <Box display="flex" justifyContent="center">
+      <Box display="flex" flexDirection="row-reverse" minWidth={600}>
+        <Crossword data={data} />
+      </Box>
+    </Box>
+  );
 }
