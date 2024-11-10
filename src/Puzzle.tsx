@@ -41,7 +41,7 @@ export function Puzzle({ data, label }: PuzzleProps) {
       <Box
         display="flex"
         flexDirection="row-reverse"
-        minWidth={475}
+        minWidth={425}
         maxWidth={600}
       >
         <Crossword data={data} onCrosswordCorrect={setOpen} />
