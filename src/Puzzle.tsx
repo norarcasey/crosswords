@@ -1,5 +1,7 @@
 import Crossword from "@jaredreisinger/react-crossword";
 import { Box, Typography } from "@mui/material";
+import { SuccessDialog } from "./SuccessDialog";
+import { useState } from "react";
 
 interface PuzzleProps {
   data: {
@@ -24,6 +26,8 @@ interface PuzzleProps {
 }
 
 export function Puzzle({ data, label }: PuzzleProps) {
+  const [open, setOpen] = useState(false);
+
   return (
     <Box
       display="flex"
@@ -40,8 +44,9 @@ export function Puzzle({ data, label }: PuzzleProps) {
         minWidth={475}
         maxWidth={600}
       >
-        <Crossword data={data} />
+        <Crossword data={data} onCrosswordCorrect={setOpen} />
       </Box>
+      <SuccessDialog open={open} onClose={() => setOpen(false)} />
     </Box>
   );
 }
