@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Puzzle } from "./Puzzle";
+import { nov92024 } from "./puzzle-data";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         </Box>
       </Box>
       <main className="page-body">
-        <Puzzle />
+        <Puzzle label="November 9th, 2024" data={nov92024} />
       </main>
       <footer className="page-footer">
         <div className="copyright">
