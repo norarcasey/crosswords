@@ -35,14 +35,14 @@ function App() {
           </Typography>
         </Box>
       </Box>
-      <main className="page-body">
+      <Box component="main">
         <Puzzle
           ref={crosswordRef}
           label={puzzleInfo.label}
           data={puzzleInfo.data}
         />
         <PuzzleList onPuzzleSelect={handlePuzzleSelect} />
-      </main>
+      </Box>
       <footer className="page-footer">
         <div className="copyright">
           Copyright &copy; {new Date().getFullYear()} Nora Casey. All rights

@@ -27,9 +27,10 @@ export function Puzzle({ data, label, ref }: PuzzleProps) {
       </Typography>
       <Box
         display="flex"
-        flexDirection="row-reverse"
-        minWidth={425}
-        maxWidth={600}
+        flexDirection="column"
+        alignItems="left"
+        minWidth={350}
+        maxWidth={500}
       >
         <Crossword
           ref={ref}

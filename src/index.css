@@ -34,26 +34,11 @@ a {
   text-decoration: none;
 }
 
-/* h4 {
-  border-bottom: dashed 1px #df6695;
-} */
-
 #root {
   box-sizing: border-box;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.page-header,
-.page-footer {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.page-body {
-  flex-grow: 1;
-  width: 100%;
 }
 
 .page-header {
