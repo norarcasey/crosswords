@@ -14,7 +14,7 @@ export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
           Puzzle List
         </Typography>
 
-        <Box display="flex" gap={2}>
+        <Box display="flex" gap={2} flexWrap="wrap">
           {Object.keys(puzzleData).map((date) => (
             <Box
               display="flex"
