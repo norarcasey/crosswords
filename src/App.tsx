@@ -1,10 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useForkRef } from "@mui/material";
 import { Puzzle } from "./Puzzle";
 import { puzzleData } from "./data/puzzle-data";
 import { PuzzleList } from "./PuzzleList";
 import { useState } from "react";
+import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
 
 function App() {
+  const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
+
   const [puzzleInfo, setPuzzleInfo] = useState({
     label: "November 10th, 2024",
     data: puzzleData["November 10th, 2024"],
@@ -33,7 +36,11 @@ function App() {
         </Box>
       </Box>
       <main className="page-body">
-        <Puzzle label={puzzleInfo.label} data={puzzleInfo.data} />
+        <Puzzle
+          ref={crosswordRef}
+          label={puzzleInfo.label}
+          data={puzzleInfo.data}
+        />
         <PuzzleList onPuzzleSelect={handlePuzzleSelect} />
       </main>
       <footer className="page-footer">
