@@ -31,7 +31,7 @@ function App() {
               letterSpacing: 0.01,
             }}
           >
-            {`[\\n]ora casey`}
+            {`[\\n]ora casey crosswords`}
           </Typography>
         </Box>
       </Box>
