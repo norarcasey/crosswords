@@ -9,8 +9,8 @@ function App() {
   const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
 
   const [puzzleInfo, setPuzzleInfo] = useState({
-    label: "November 12th, 2024",
-    data: puzzleData["November 12th, 2024"],
+    label: "November 13th, 2024",
+    data: puzzleData["November 13th, 2024"],
   });
 
   function handlePuzzleSelect(date: string) {
