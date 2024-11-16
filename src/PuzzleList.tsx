@@ -8,7 +8,7 @@ interface PuzzleListProps {
 
 export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
   return (
-    <Box pl={2} display="flex">
+    <Box pl={2} pr={2} display="flex">
       <Box mb={2}>
         <Typography variant="h4" mb={2}>
           Puzzle List
