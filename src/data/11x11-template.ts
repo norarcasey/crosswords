@@ -1,0 +1,138 @@
+export const data = {
+  across: {
+    1: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 0,
+    },
+    12: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 2,
+      col: 0,
+    },
+    14: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 3,
+      col: 0,
+    },
+    15: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 4,
+      col: 0,
+    },
+    16: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 5,
+      col: 0,
+    },
+    17: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 6,
+      col: 0,
+    },
+    18: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 7,
+      col: 0,
+    },
+    19: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 8,
+      col: 0,
+    },
+    20: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 9,
+      col: 0,
+    },
+    21: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 10,
+      col: 0,
+    },
+    22: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 11,
+      col: 0,
+    },
+  },
+  down: {
+    1: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 0,
+    },
+    2: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 1,
+    },
+    3: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 2,
+    },
+    4: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 3,
+    },
+    5: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 4,
+    },
+    6: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 5,
+    },
+    7: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 6,
+    },
+    8: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 7,
+    },
+    9: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 8,
+    },
+    10: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 9,
+    },
+    11: {
+      clue: "TODO: ADD CLUE",
+      answer: "ABCDEFGHIJK",
+      row: 0,
+      col: 10,
+    },
+  },
+};
