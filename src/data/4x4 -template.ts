@@ -1,25 +1,25 @@
 export const data = {
   across: {
     1: {
-      clue: "Dwelling",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 0,
       col: 0,
     },
     5: {
-      clue: "Philbin",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 1,
       col: 0,
     },
     6: {
-      clue: "Biblical word for brought a child into extistence by `doing the nasty`",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 2,
       col: 0,
     },
     7: {
-      clue: "Flair",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 3,
       col: 0,
@@ -27,25 +27,25 @@ export const data = {
   },
   down: {
     1: {
-      clue: "What you should eat before a marathon",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 0,
       col: 0,
     },
     2: {
-      clue: "Little bitch",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 0,
       col: 1,
     },
     3: {
-      clue: "West (sp.)",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 0,
       col: 2,
     },
     4: {
-      clue: "A Schrute farm harvested item",
+      clue: "TODO: ADD CLUE",
       answer: "ABCD",
       row: 0,
       col: 3,

@@ -8,7 +8,7 @@ import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
 function App() {
   const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
 
-  const todaysPuzzle = "November 18th, 2024";
+  const todaysPuzzle = "November 19th, 2024";
 
   const [puzzleInfo, setPuzzleInfo] = useState({
     label: todaysPuzzle,

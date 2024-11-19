@@ -1,186 +1,58 @@
 export const data = {
   across: {
     1: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+      clue: "Someone who committed a crime",
+      answer: "PERP",
       row: 0,
       col: 0,
     },
-    16: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+    5: {
+      clue: "Really give it to someone",
+      answer: "RAIL",
       row: 1,
       col: 0,
     },
-    17: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+    6: {
+      clue: "Another name used by Standard Oil",
+      answer: "ESSO",
       row: 2,
       col: 0,
     },
-    18: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+    7: {
+      // Clue to get someone to guess the word "peep"
+      clue: "A small sound",
+      answer: "PEEP",
       row: 3,
-      col: 0,
-    },
-    19: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 4,
-      col: 0,
-    },
-    20: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 5,
-      col: 0,
-    },
-    21: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 6,
-      col: 0,
-    },
-    22: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 7,
-      col: 0,
-    },
-    23: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 8,
-      col: 0,
-    },
-    24: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 9,
-      col: 0,
-    },
-    26: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 10,
-      col: 0,
-    },
-    27: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 11,
-      col: 0,
-    },
-    28: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 12,
-      col: 0,
-    },
-    29: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 13,
-      col: 0,
-    },
-    30: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 14,
       col: 0,
     },
   },
   down: {
     1: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+      // Clue to get someone to guess the word "prep"
+      clue: "Get ready",
+      answer: "PREP",
       row: 0,
       col: 0,
     },
     2: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+      // Clue to get someone to guess the word "ease"
+      clue: "Relax",
+      answer: "EASE",
       row: 0,
       col: 1,
     },
     3: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+      // Clue to get someone to guess the word "Rise"
+      clue: "Get up",
+      answer: "RISE",
       row: 0,
       col: 2,
     },
     4: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
+      clue: 'Sound of "dropping a kid off at the pool"',
+      answer: "PLOP",
       row: 0,
       col: 3,
-    },
-    5: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 4,
-    },
-    6: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 5,
-    },
-    7: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 6,
-    },
-    8: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 7,
-    },
-    9: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 8,
-    },
-    10: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 9,
-    },
-    11: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 10,
-    },
-    12: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 11,
-    },
-    13: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 12,
-    },
-    14: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 13,
-    },
-    15: {
-      clue: "TODO: ADD CLUE",
-      answer: "ABCDEFGHIJKLMNO",
-      row: 0,
-      col: 14,
     },
   },
 };
