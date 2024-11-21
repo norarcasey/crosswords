@@ -12,8 +12,25 @@ interface PuzzleProps {
   ref: Ref<CrosswordProviderImperative>;
 }
 
+// async function fetchPossibleWords(str: string) {
+//   const url = `https://api.datamuse.com/words?sp=${str}`;
+
+//   const response = fetch(url);
+//   return (await response).json();
+// }
+
 export function Puzzle({ data, label, ref }: PuzzleProps) {
   const [open, setOpen] = useState(false);
+  // const [words, setWords] = useState([]);
+
+  // useEffect(() => {
+  //   const test = fetchPossibleWords("t??s");
+  //   test.then((data) => {
+  //     setWords(data);
+  //   });
+  // }, []);
+
+  // console.log(words);
 
   return (
     <Box
@@ -37,6 +54,7 @@ export function Puzzle({ data, label, ref }: PuzzleProps) {
           data={data}
           onCrosswordCorrect={setOpen}
           useStorage={false}
+          // onCellChange={(cell, col, char) => console.log(cell, col, char)}
         />
       </Box>
       <SuccessDialog open={open} onClose={() => setOpen(false)} />

@@ -17,6 +17,7 @@ export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
         <Box display="flex" gap={2} flexWrap="wrap">
           {Object.keys(puzzleData).map((date) => (
             <Box
+              key={date}
               display="flex"
               flexDirection="column"
               alignItems="center"

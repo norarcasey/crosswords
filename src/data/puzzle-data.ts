@@ -11,12 +11,14 @@ import { data as puzzleData20241117 } from "./20241117";
 import { data as puzzleData20241118 } from "./20241118";
 import { data as puzzleData20241119 } from "./20241119";
 import { data as puzzleData20241120 } from "./20241120";
+import { data as puzzleData20241121 } from "./20241121";
 
 interface PuzzleData {
   [key: string]: CluesInputOriginal;
 }
 
 export const puzzleData: PuzzleData = {
+  "November 21st, 2024": puzzleData20241121,
   "November 20th, 2024": puzzleData20241120,
   "November 19th, 2024": puzzleData20241119,
   "November 18th, 2024": puzzleData20241118,
