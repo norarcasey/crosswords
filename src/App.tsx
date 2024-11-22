@@ -4,6 +4,7 @@ import { puzzleData } from "./data/puzzle-data";
 import { PuzzleList } from "./PuzzleList";
 import { useState } from "react";
 import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
+import { CrosswordBuilder } from "./CrosswordBuilder";
 
 function App() {
   const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
@@ -38,6 +39,7 @@ function App() {
         </Box>
       </Box>
       <Box component="main">
+        {/* <CrosswordBuilder /> */}
         <Puzzle
           ref={crosswordRef}
           label={puzzleInfo.label}
