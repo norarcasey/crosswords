@@ -4,12 +4,12 @@ import { puzzleData } from "./data/puzzle-data";
 import { PuzzleList } from "./PuzzleList";
 import { useState } from "react";
 import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
-import { CrosswordBuilder } from "./CrosswordBuilder";
+// import { CrosswordBuilder } from "./CrosswordBuilder";
 
 function App() {
   const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
 
-  const todaysPuzzle = "November 21st, 2024";
+  const todaysPuzzle = "November 22nd, 2024";
 
   const [puzzleInfo, setPuzzleInfo] = useState({
     label: todaysPuzzle,
