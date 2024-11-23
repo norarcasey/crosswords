@@ -98,7 +98,7 @@ export function CrosswordBuilder() {
                 onChange={(e) => {
                   const newWord = e.target.value?.toUpperCase().split("");
 
-                  const newGrid = grid.map((r, i) =>
+                  const newGrid = grid.map((r) =>
                     r.map((cell, j) => {
                       if (j === colIndex) {
                         if (cell === "-") {
