@@ -1,10 +1,11 @@
+import { Ref, useState } from "react";
+import { CluesInputOriginal } from "@jaredreisinger/react-crossword/dist/types";
 import Crossword, {
   CrosswordProviderImperative,
 } from "@jaredreisinger/react-crossword";
 import { Box, Typography } from "@mui/material";
-import { SuccessDialog } from "./SuccessDialog";
-import { Ref, useState } from "react";
-import { CluesInputOriginal } from "@jaredreisinger/react-crossword/dist/types";
+
+import { PuzzleCompleteDialog } from "./PuzzleCompleteDialog";
 
 interface PuzzleProps {
   data: CluesInputOriginal;
@@ -12,25 +13,10 @@ interface PuzzleProps {
   ref: Ref<CrosswordProviderImperative>;
 }
 
-// async function fetchPossibleWords(str: string) {
-//   const url = `https://api.datamuse.com/words?sp=${str}`;
-
-//   const response = fetch(url);
-//   return (await response).json();
-// }
-
 export function Puzzle({ data, label, ref }: PuzzleProps) {
   const [open, setOpen] = useState(false);
-  // const [words, setWords] = useState([]);
-
-  // useEffect(() => {
-  //   const test = fetchPossibleWords("t??s");
-  //   test.then((data) => {
-  //     setWords(data);
-  //   });
-  // }, []);
-
-  // console.log(words);
+  const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
+  const [isComplete, setIsComplete] = useState(false);
 
   return (
     <Box
@@ -52,12 +38,31 @@ export function Puzzle({ data, label, ref }: PuzzleProps) {
         <Crossword
           ref={ref}
           data={data}
-          onCrosswordCorrect={setOpen}
+          onCellChange={(_row, _col, char) => {
+            if (!!char) {
+              setIsComplete(false);
+            }
+          }}
+          onCrosswordComplete={(correct?: boolean) => {
+            if (isCorrect === correct) return;
+
+            setIsCorrect(!!correct);
+
+            if (isComplete) return;
+
+            setOpen(true);
+            setIsComplete(true);
+          }}
           useStorage={false}
-          // onCellChange={(cell, col, char) => console.log(cell, col, char)}
         />
       </Box>
-      <SuccessDialog open={open} onClose={() => setOpen(false)} />
+      <PuzzleCompleteDialog
+        open={open}
+        isCorrect={!!isCorrect}
+        onClose={() => {
+          setOpen(false);
+        }}
+      />
     </Box>
   );
 }

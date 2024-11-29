@@ -2,6 +2,17 @@ import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { PossibleWords } from "./PossibleWords";
 
+function getLetters(word?: string) {
+  if (!word) {
+    return [];
+  }
+  return word.toUpperCase().split("");
+}
+
+function buildValue(letters: string[]) {
+  return letters.filter((l) => l !== "-").join("");
+}
+
 export function CrosswordBuilder() {
   const gridSize = 5;
   const [grid, setGrid] = useState<string[][]>(
@@ -37,11 +48,12 @@ export function CrosswordBuilder() {
             <Box display="flex" gap={2}>
               <Typography>{rowIndex + 1}</Typography>
               <input
-                value={row.filter((l) => l !== "-").join("")}
+                value={buildValue(row)}
                 onChange={(e) => {
+                  const newWord = getLetters(e.target.value);
+
                   const newGrid = grid.map((r, i) => {
                     if (i === rowIndex) {
-                      const newWord = e.target.value.toUpperCase().split("");
                       const result = [];
 
                       for (let i = 0; i < gridSize; i++) {
@@ -91,12 +103,9 @@ export function CrosswordBuilder() {
             <Box display="flex" gap={2}>
               <Typography>{colIndex + 1}</Typography>
               <input
-                value={grid
-                  .map((row) => row[colIndex])
-                  .filter((l) => l !== "-")
-                  .join("")}
+                value={buildValue(grid.map((row) => row[colIndex]))}
                 onChange={(e) => {
-                  const newWord = e.target.value?.toUpperCase().split("");
+                  const newWord = getLetters(e.target.value);
 
                   const newGrid = grid.map((r) =>
                     r.map((cell, j) => {
