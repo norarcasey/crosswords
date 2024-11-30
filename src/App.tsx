@@ -1,25 +1,34 @@
+import { useState } from "react";
+import { DateTime } from "luxon";
+
 import { Box, Typography, useForkRef } from "@mui/material";
+import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
+
 import { Puzzle } from "./Puzzle";
 import { puzzleData } from "./data/puzzle-data";
 import { PuzzleList } from "./PuzzleList";
-import { useState } from "react";
-import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
+
 // import { CrosswordBuilder } from "./CrosswordBuilder";
+
+function getDateLabel(dateKey: string | number): string {
+  return DateTime.fromFormat(dateKey.toString(), "yyyyMMdd").toLocaleString(
+    DateTime.DATE_HUGE
+  );
+}
 
 function App() {
   const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
-
-  const todaysPuzzle = "November 30th, 2024";
+  const puzzleDateKey = 20241130;
 
   const [puzzleInfo, setPuzzleInfo] = useState({
-    label: todaysPuzzle,
-    data: puzzleData[todaysPuzzle],
+    label: getDateLabel(puzzleDateKey),
+    data: puzzleData[puzzleDateKey],
   });
 
-  function handlePuzzleSelect(date: string) {
+  function handlePuzzleSelect(dateStr: string) {
     setPuzzleInfo({
-      label: date,
-      data: puzzleData[date],
+      label: getDateLabel(dateStr),
+      data: puzzleData[dateStr],
     });
   }
 
@@ -42,7 +51,7 @@ function App() {
         {/* <CrosswordBuilder /> */}
         <Puzzle
           ref={crosswordRef}
-          label={puzzleInfo.label}
+          label={puzzleInfo.label.toString()}
           data={puzzleInfo.data}
         />
         <PuzzleList onPuzzleSelect={handlePuzzleSelect} />

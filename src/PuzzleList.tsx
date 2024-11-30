@@ -1,4 +1,6 @@
 import { Box, IconButton, Typography } from "@mui/material";
+import { DateTime } from "luxon";
+
 import { puzzleData } from "./data/puzzle-data";
 import { CrosswordIcon } from "./icons/CrosswordIcon";
 
@@ -7,6 +9,10 @@ interface PuzzleListProps {
 }
 
 export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
+  const sortedDates = Object.keys(puzzleData).sort(
+    (a, b) => parseInt(b) - parseInt(a)
+  );
+
   return (
     <Box pl={2} pr={2} display="flex">
       <Box mb={2}>
@@ -15,7 +21,7 @@ export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
         </Typography>
 
         <Box display="flex" gap={2} flexWrap="wrap">
-          {Object.keys(puzzleData).map((date) => (
+          {sortedDates.map((date) => (
             <Box
               key={date}
               display="flex"
@@ -26,7 +32,10 @@ export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
               p={2}
             >
               <Typography variant="caption" whiteSpace="wrap">
-                {date}
+                {DateTime.fromFormat(
+                  date.toString(),
+                  "yyyyMMdd"
+                ).toLocaleString(DateTime.DATE_HUGE)}
               </Typography>
               <IconButton onClick={() => onPuzzleSelect(date)}>
                 <CrosswordIcon />
