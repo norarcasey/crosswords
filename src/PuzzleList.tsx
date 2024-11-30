@@ -1,8 +1,8 @@
 import { Box, IconButton, Typography } from "@mui/material";
-import { DateTime } from "luxon";
 
 import { puzzleData } from "./data/puzzle-data";
 import { CrosswordIcon } from "./icons/CrosswordIcon";
+import { getDateLabel } from "./utils";
 
 interface PuzzleListProps {
   onPuzzleSelect: (date: string) => void;
@@ -32,10 +32,7 @@ export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
               p={2}
             >
               <Typography variant="caption" whiteSpace="wrap">
-                {DateTime.fromFormat(
-                  date.toString(),
-                  "yyyyMMdd"
-                ).toLocaleString(DateTime.DATE_HUGE)}
+                {getDateLabel(date)}
               </Typography>
               <IconButton onClick={() => onPuzzleSelect(date)}>
                 <CrosswordIcon />

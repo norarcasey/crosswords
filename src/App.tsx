@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DateTime } from "luxon";
 
 import { Box, Typography, useForkRef } from "@mui/material";
 import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
@@ -7,14 +6,9 @@ import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
 import { Puzzle } from "./Puzzle";
 import { puzzleData } from "./data/puzzle-data";
 import { PuzzleList } from "./PuzzleList";
+import { getDateLabel } from "./utils";
 
 // import { CrosswordBuilder } from "./CrosswordBuilder";
-
-function getDateLabel(dateKey: string | number): string {
-  return DateTime.fromFormat(dateKey.toString(), "yyyyMMdd").toLocaleString(
-    DateTime.DATE_HUGE
-  );
-}
 
 function App() {
   const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
