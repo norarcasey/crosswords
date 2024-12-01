@@ -25,9 +25,11 @@ export function Puzzle({ data, label, ref }: PuzzleProps) {
       justifyContent="center"
       alignItems="center"
     >
-      <Typography variant="h4" mb={4}>
-        {label}
-      </Typography>
+      <Box>
+        <Typography variant="h4" mb={4}>
+          {label}
+        </Typography>
+      </Box>
       <Box
         display="flex"
         flexDirection="column"

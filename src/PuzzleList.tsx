@@ -1,12 +1,14 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { puzzleData } from "./data/puzzle-data";
 import { CrosswordIcon } from "./icons/CrosswordIcon";
 import { getDateLabel } from "./utils";
 import { useNavigate } from "react-router-dom";
+import { usePuzzleDateKey } from "./hooks/usePuzzleDateKey";
 
 export function PuzzleList() {
   const navigate = useNavigate();
+  const puzzleDateKey = usePuzzleDateKey();
 
   const sortedDates = Object.keys(puzzleData).sort(
     (a, b) => parseInt(b) - parseInt(a)
@@ -23,25 +25,41 @@ export function PuzzleList() {
           Puzzle List
         </Typography>
 
-        <Box display="flex" gap={2} flexWrap="wrap">
+        <Box display="flex" gap={3} flexWrap="wrap">
           {sortedDates.map((date) => (
-            <IconButton onClick={() => handlePuzzleSelect(date)}>
-              <Box
-                key={date}
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                border="dotted black 1px"
-                borderRadius={4}
-                p={2}
+            <Box
+              key={date}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              border="dotted black 1px"
+              borderRadius={4}
+              p={2}
+              minWidth={120}
+              onClick={() => handlePuzzleSelect(date)}
+              style={{
+                cursor: "pointer",
+                backgroundColor: puzzleDateKey === date ? "#f0f0f0" : undefined,
+              }}
+            >
+              <Typography
+                variant="caption"
+                whiteSpace="wrap"
+                maxWidth={80}
+                textAlign="center"
               >
-                <Typography variant="caption" whiteSpace="wrap">
-                  {getDateLabel(date)}
-                </Typography>
+                {getDateLabel(date, {
+                  format: {
+                    weekday: "long",
+                    month: "short",
+                    day: "2-digit",
+                    year: "numeric",
+                  },
+                })}
+              </Typography>
 
-                <CrosswordIcon />
-              </Box>
-            </IconButton>
+              <CrosswordIcon />
+            </Box>
           ))}
         </Box>
       </Box>
