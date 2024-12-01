@@ -42,15 +42,16 @@ export function PuzzleList() {
                 backgroundColor: puzzleDateKey === date ? "#f0f0f0" : undefined,
               }}
             >
-              <Typography
-                variant="caption"
-                whiteSpace="wrap"
-                maxWidth={80}
-                textAlign="center"
-              >
+              <Typography variant="caption">
                 {getDateLabel(date, {
                   format: {
                     weekday: "long",
+                  },
+                })}
+              </Typography>
+              <Typography variant="caption">
+                {getDateLabel(date, {
+                  format: {
                     month: "short",
                     day: "2-digit",
                     year: "numeric",
