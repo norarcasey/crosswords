@@ -1,33 +1,13 @@
-import { useState } from "react";
+import { Box, Typography } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
 
-import { Box, Typography, useForkRef } from "@mui/material";
-import { CrosswordProviderImperative } from "@jaredreisinger/react-crossword";
-
-import { Puzzle } from "./Puzzle";
-import { puzzleData } from "./data/puzzle-data";
-import { PuzzleList } from "./PuzzleList";
-import { getDateLabel } from "./utils";
+import { Home } from "./Home";
 
 // import { CrosswordBuilder } from "./CrosswordBuilder";
 
 function App() {
-  const crosswordRef = useForkRef<CrosswordProviderImperative>(null);
-  const puzzleDateKey = 20241130;
-
-  const [puzzleInfo, setPuzzleInfo] = useState({
-    label: getDateLabel(puzzleDateKey),
-    data: puzzleData[puzzleDateKey],
-  });
-
-  function handlePuzzleSelect(dateStr: string) {
-    setPuzzleInfo({
-      label: getDateLabel(dateStr),
-      data: puzzleData[dateStr],
-    });
-  }
-
   return (
-    <>
+    <BrowserRouter>
       <Box component="header" className="page-header">
         <Box>
           <Typography
@@ -43,12 +23,7 @@ function App() {
       </Box>
       <Box component="main">
         {/* <CrosswordBuilder /> */}
-        <Puzzle
-          ref={crosswordRef}
-          label={puzzleInfo.label.toString()}
-          data={puzzleInfo.data}
-        />
-        <PuzzleList onPuzzleSelect={handlePuzzleSelect} />
+        <Home />
       </Box>
       <footer className="page-footer">
         <div className="copyright">
@@ -56,7 +31,7 @@ function App() {
           reserved.
         </div>
       </footer>
-    </>
+    </BrowserRouter>
   );
 }
 

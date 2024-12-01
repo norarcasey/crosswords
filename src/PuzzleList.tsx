@@ -3,15 +3,18 @@ import { Box, IconButton, Typography } from "@mui/material";
 import { puzzleData } from "./data/puzzle-data";
 import { CrosswordIcon } from "./icons/CrosswordIcon";
 import { getDateLabel } from "./utils";
+import { useNavigate } from "react-router-dom";
 
-interface PuzzleListProps {
-  onPuzzleSelect: (date: string) => void;
-}
+export function PuzzleList() {
+  const navigate = useNavigate();
 
-export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
   const sortedDates = Object.keys(puzzleData).sort(
     (a, b) => parseInt(b) - parseInt(a)
   );
+
+  function handlePuzzleSelect(date: string) {
+    navigate(`#${date}`);
+  }
 
   return (
     <Box pl={2} pr={2} display="flex">
@@ -34,7 +37,7 @@ export function PuzzleList({ onPuzzleSelect }: PuzzleListProps) {
               <Typography variant="caption" whiteSpace="wrap">
                 {getDateLabel(date)}
               </Typography>
-              <IconButton onClick={() => onPuzzleSelect(date)}>
+              <IconButton onClick={() => handlePuzzleSelect(date)}>
                 <CrosswordIcon />
               </IconButton>
             </Box>
