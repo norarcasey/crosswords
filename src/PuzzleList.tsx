@@ -25,22 +25,23 @@ export function PuzzleList() {
 
         <Box display="flex" gap={2} flexWrap="wrap">
           {sortedDates.map((date) => (
-            <Box
-              key={date}
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              border="dotted black 1px"
-              borderRadius={4}
-              p={2}
-            >
-              <Typography variant="caption" whiteSpace="wrap">
-                {getDateLabel(date)}
-              </Typography>
-              <IconButton onClick={() => handlePuzzleSelect(date)}>
+            <IconButton onClick={() => handlePuzzleSelect(date)}>
+              <Box
+                key={date}
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                border="dotted black 1px"
+                borderRadius={4}
+                p={2}
+              >
+                <Typography variant="caption" whiteSpace="wrap">
+                  {getDateLabel(date)}
+                </Typography>
+
                 <CrosswordIcon />
-              </IconButton>
-            </Box>
+              </Box>
+            </IconButton>
           ))}
         </Box>
       </Box>

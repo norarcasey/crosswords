@@ -1,13 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { Home } from "./Home";
-
-// import { CrosswordBuilder } from "./CrosswordBuilder";
+import { CrosswordBuilder } from "./CrosswordBuilder";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Box component="header" className="page-header">
         <Box>
           <Typography
@@ -22,8 +21,10 @@ function App() {
         </Box>
       </Box>
       <Box component="main">
-        {/* <CrosswordBuilder /> */}
-        <Home />
+        <Routes>
+          <Route path="/crosswords/build" element={<CrosswordBuilder />} />
+          <Route path="/crosswords" element={<Home />} />
+        </Routes>
       </Box>
       <footer className="page-footer">
         <div className="copyright">
@@ -31,7 +32,7 @@ function App() {
           reserved.
         </div>
       </footer>
-    </BrowserRouter>
+    </>
   );
 }
 
