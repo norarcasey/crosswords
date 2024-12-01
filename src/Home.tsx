@@ -23,6 +23,7 @@ function usePuzzleDateKey() {
     return now;
   }
 
+  // Grab the latest puzzle we have
   return Object.keys(puzzleData).sort((a, b) => parseInt(b) - parseInt(a))[0];
 }
 
